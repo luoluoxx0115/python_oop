@@ -14,23 +14,24 @@ from pyton_oop.animal import Animal
 
 
 class Cat(Animal):
-    def __init__(self):
+    def __init__(self, name, color, age, gender):
         # 重写父类的__init__方法，继承父类的属性
-        super().__init__('咪咻')
+        super().__init__(name, color, age, gender)
         # 子类添加一个新的属性：毛发 = 短毛
-        self.hair = 'short hair'
+        self.hair = '短毛'
         print(f'毛发是：{self.hair}')
 
     # 子类添加一个新的方法：会捉老鼠
     def catch_mice(self):
-        print(f'{self.name}会捉老鼠')
+        print(f'{self.name} 会捉老鼠')
 
     # 重写父类的【会叫】的方法，改成【喵喵叫】
     def shout(self):
-        print(f'{self.name}会喵喵叫')
+        print(f'{self.name} 会喵喵叫')
 
 
 if __name__ == '__main__':
-    cat = Cat()
+    cat = Cat('咪咻', '白色', 8, '母')
     cat.catch_mice()
     cat.shout()
+    cat.run()

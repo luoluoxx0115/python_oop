@@ -11,11 +11,11 @@
 
 
 class Animal:
-    def __init__(self, name):
+    def __init__(self, name, color, age, gender):
         self.name = name
-        self.color = 'white'
-        self.age = 8
-        self.gender = 'female'
+        self.color = color
+        self.age = age
+        self.gender = gender
         print(f'动物的名字叫{self.name}，'
               f'颜色是：{self.color},'
               f'年龄是：{self.age},'
@@ -29,7 +29,7 @@ class Animal:
 
 
 if __name__ == '__main__':
-    cat = Animal('咪咻')
+    cat = Animal('咪咻', '白色', 8, '母')
     cat.shout()
     cat.run()
 
